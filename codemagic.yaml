@@ -7,7 +7,7 @@ workflows:
         NODE_ENV: development
     scripts:
       - name: Install dependencies
-        script: yarn install
+        script: npm install
       - name: Run Android build
         script: ./gradlew assembleDebug
     artifacts:
