@@ -5,9 +5,6 @@ workflows:
     environment:
       vars:
         NODE_ENV: development
-      flutter: false
-      react_native: true
-      xcode: false
     scripts:
       - name: Install dependencies
         script: yarn install
