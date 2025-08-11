@@ -1,0 +1,17 @@
+workflows:
+  android-workflow:
+    name: Android Workflow
+    max_build_duration: 60
+    environment:
+      vars:
+        NODE_ENV: development
+      flutter: false
+      react_native: true
+      xcode: false
+    scripts:
+      - name: Install dependencies
+        script: yarn install
+      - name: Run Android build
+        script: ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/apk/debug/app-debug.apk
